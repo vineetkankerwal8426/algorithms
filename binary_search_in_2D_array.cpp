@@ -14,13 +14,10 @@ vector<int> search(vector<vector<int>> &arr, int target)
 {
     int row = 0;
     int col = arr[0].size() - 1;
-    vector<int> ans = {-1, -1};
     while (row < arr.size() && col >= 0)
     {
         if (arr[row][col] == target)
         {
-            ans[0] = row;
-            ans[1] = col;
             return {row, col};
         }
         else if (arr[row][col] < target)
