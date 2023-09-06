@@ -17,3 +17,15 @@ void cyclicSort(int arr[],int size){
         }
     }
 }
+
+//or
+
+
+void cyclicSort(int arr[],int size){
+    for(int i =0;i<size;){
+        if(arr[i]!=arr[arr[i]-1]){
+            swap(arr[i],arr[arr[i]-1]);
+        }
+        else i++;
+    }
+}
