@@ -20,3 +20,30 @@ void selecionSort(int arr[], int size)
         }
     }
 }
+
+// recursive approach using max element
+
+void selectionSort(int arr[], int size, int j, int max) //max and j will be initially zero i.e max =0;j =0;
+{
+    if (size == 1)
+    {
+        return;
+    }
+    if (j < size)
+    {
+        if (arr[j] > arr[max])
+        {
+            // max = j;
+            selectionSort(arr, size, j + 1, j);
+        }
+        else
+        {
+            selectionSort(arr, size, j + 1, max);
+        }
+    }
+    else
+    {
+        swap(arr[j - 1], arr[max]);
+        selectionSort(arr, size - 1, 0, 0);
+    }
+}
