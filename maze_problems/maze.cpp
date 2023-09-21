@@ -11,8 +11,8 @@ int countpath(int r,int c){
     if(r==1 || c ==1){
         return 1;
     }
-    int left = countmaze(r-1,c);
-    int right = countmaze(r,c-1);
+    int left = countpath(r-1,c);
+    int right = countpath(r,c-1);
     return left + right;
 }
 
