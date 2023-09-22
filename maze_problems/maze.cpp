@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-//count the number of path for going to end; 
+//count the number of path for going to end; you can only go down and right ;
 //  {[],[],[],
 //   [],[],[],
 //   [],[],[]}
