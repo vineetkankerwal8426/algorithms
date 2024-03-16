@@ -30,3 +30,15 @@ void subseq(string p, string up){
     subseq(p+ch,up.substr(1));
     subseq(p,up.substr(1));
 }
+
+// subset using backtracking 
+
+void subseq(int idx, string s,string temp){  //initially idx will be zero  , s = main string from which we have to find all subsets
+    
+    cout<<temp<<" ";
+    for(int i = idx;i<s.size();i++){  
+        temp.push_back(s[i]);
+        subseq(i+1,s,temp);
+        temp.pop_back();    
+    }
+}
